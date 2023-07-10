@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergencia Volcán</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <img src="img/logo-salud2.png" alt="" />
+    <a
+      href="https://aplicativos.manizalessiis.net/emergencias/talento_humano_campo/"
+      >Seguimiento al Talento Humano</a
+    >
+    <a href="https://aplicativos.manizalessiis.net/emergencias/ficha_psicosocial/">Ficha de Atención Psicosocial</a>
+    <a href="login.html"
+      >Cargue de Actas de Visitas Técnicas</a
+    >
+
+    <h2 class="index-title2">Aplicativos de Contingencia Volcán Nevado del Ruiz</h2>
+
+    <script>
+      const buttons = document.querySelectorAll("a");
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+          let x = e.clientX - e.target.offsetLeft;
+          let y = e.clientY - e.target.offsetTop;
+
+          let ripples = document.createElement("span");
+          ripples.style.left = x + "px";
+          ripples.style.top = y + "px";
+          this.appendChild(ripples);
+
+          setTimeout(() => {
+            ripples.remove();
+          }, 1000);
+        });
+      });
+    </script>
+  </body>
+</html>
